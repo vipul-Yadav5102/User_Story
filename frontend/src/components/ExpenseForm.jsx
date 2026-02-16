@@ -29,7 +29,7 @@ const ExpenseForm = ({ onExpenseAdded }) => {
     setIsSubmitting(true);
 
     try {
-      await axios.post('http://localhost:3000/expenses', {
+      await axios.post(`${process.env.REACT_APP_API_URL}/expenses`, {
         amount: amountInCents,
         category,
         description,
