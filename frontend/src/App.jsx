@@ -29,7 +29,7 @@ function App() {
     setLoading(true);
     setError('');
     try {
-      let url = `${process.env.REACT_APP_API_URL}/expenses`;
+      let url = `${import.meta.env.VITE_API_URL}/expenses`;
       const params = new URLSearchParams();
       if (filterCategory) params.append('category', filterCategory);
       if (sortDateDesc) params.append('sort', 'date_desc');
